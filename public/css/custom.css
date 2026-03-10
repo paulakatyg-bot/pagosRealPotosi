@@ -1,0 +1,6 @@
+body {
+    background: linear-gradient(rgba(90,0,120,0.85), rgba(90,0,120,0.85)),
+                url('/img/escudo.png');
+    background-size: cover;
+    background-position: center;
+}
