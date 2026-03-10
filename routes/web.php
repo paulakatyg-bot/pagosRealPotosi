@@ -51,8 +51,8 @@ Route::middleware(['auth'])->group(function () {
         // Rutas principales de pagos
         Route::resource('pagos', PagoController::class);
 
-        Route::get('pagos/persona/{id}', [App\Http\Controllers\PagoController::class, 'show'])
-        ->name('pagos.show');
+        //Route::get('pagos/persona/{id}', [PagoController::class, 'showDetalle'])
+        //->name('pagos.showDetalle');
         
         // Ruta técnica para cargar datos dinámicos en el modal de pagos
         Route::get('pagos/datos-contrato/{persona_id}', [PagoController::class, 'getDatosContrato'])
