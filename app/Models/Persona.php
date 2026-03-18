@@ -30,4 +30,8 @@ class Persona extends Model
     {
         return $this->hasMany(Pago::class);
     }
+    public function tarjetaAbono()
+    {
+        return $this->hasOne(TarjetaAbono::class, 'persona_id');
+    }
 }
