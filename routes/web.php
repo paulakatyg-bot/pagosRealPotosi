@@ -7,6 +7,7 @@ use App\Http\Controllers\CuentaFinancieraController;
 use App\Http\Controllers\ContratoController;
 use App\Http\Controllers\PagoController;
 use App\Http\Controllers\ReporteGerencialController;
+use App\Http\Controllers\BotController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -19,9 +20,12 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return redirect()->route('login');
 });
+Route::post('/bot/consultar', [BotController::class, 'procesarConsulta']);
 
 // 2. Rutas de Autenticación (Login, Logout, etc.)
 Auth::routes();
+
+
 
 // 3. Rutas Protegidas (Solo para usuarios logueados)
 Route::middleware(['auth'])->group(function () {
